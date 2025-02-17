@@ -5,10 +5,13 @@ const data = require('./data.json');
 const { error } = require('console');
 const { title } = require('process');
 
+require('dotenv').config(); // Cargamos las variables de entorno
+
 // Inicializamos la appa de express
 const app = express();
 // Definimos el puerto donde estara corriendo nuestra API
-const PORT = 3002;
+// y cuando se trabaje en PROD sea cualquier valor configurado por el entorno o el 3002 en desarrollo
+const PORT = process.env.PORT || 3002;  // Puerto por defecto 3002 
 
 app.use(cors()) 
 
