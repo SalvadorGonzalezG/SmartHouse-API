@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "title": "Apartamento Manhattan",
+        "price": 250000,
+        "location": "New York",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 2500,
+        "image": "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "Residencia Berlín",
+        "price": 320000,
+        "location": "Berlin",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 3200,
+        "image": "https://images.pexels.com/photos/1543446/pexels-photo-1543446.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "Casa Londres",
+        "price": 450000,
+        "location": "London",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "square_feet": 4000,
+        "image": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+      },
+      {
+        "id": 4,
+        "title": "Piso en Tokio",
+        "price": 180000,
+        "location": "Tokyo",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "square_feet": 1500,
+        "image": "https://images.pexels.com/photos/3797991/pexels-photo-3797991.jpeg"
+      },
+      {
+        "id": 5,
+        "title": "Casa en Mumbai",
+        "price": 275000,
+        "location": "Mumbai",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 2700,
+        "image": "https://images.pexels.com/photos/1701934/pexels-photo-1701934.jpeg"
+      },
+    {
+        "id": 6,
+        "title": "Casa Mar",
+        "price": 275000,
+        "location": "Mumbai",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "square_feet": 3700,
+        "image": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+      },
+      {
+        "id": 7,
+        "title": "Villa Serena",
+        "price": 320000,
+        "location": "Barcelona",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "square_feet": 4200,
+        "image": "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+      },
+      {
+        "id": 8,
+        "title": "Residencia Aurora",
+        "price": 290000,
+        "location": "Paris",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 3900,
+        "image": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+      },
+      {
+        "id": 9,
+        "title": "Casa del Lago",
+        "price": 310000,
+        "location": "Toronto",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "square_feet": 4300,
+        "image": "https://images.pexels.com/photos/7031403/pexels-photo-7031403.jpeg"
+      },
+      {
+        "id": 10,
+        "title": "Palacio del Sol",
+        "price": 500000,
+        "location": "Dubai",
+        "bedrooms": 6,
+        "bathrooms": 5,
+        "square_feet": 6000,
+        "image": "https://images.pexels.com/photos/259602/pexels-photo-259602.jpeg"
+      },
+      {
+        "id": 11,
+        "title": "Casa del Bosque",
+        "price": 280000,
+        "location": "Berlin",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "square_feet": 3700,
+        "image": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+      },
+      {
+        "id": 12,
+        "title": "Penthouse Urbano",
+        "price": 450000,
+        "location": "New York",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 2500,
+        "image": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+      },
+      {
+        "id": 13,
+        "title": "Mansión Riviera",
+        "price": 750000,
+        "location": "Monaco",
+        "bedrooms": 7,
+        "bathrooms": 6,
+        "square_feet": 8000,
+        "image": "https://images.pexels.com/photos/167704/pexels-photo-167704.jpeg"
+      },
+      {
+        "id": 14,
+        "title": "Chalet Alpino",
+        "price": 360000,
+        "location": "Suiza",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 3800,
+        "image": "https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg"
+      },
+      {
+        "id": 15,
+        "title": "Casa de Playa",
+        "price": 410000,
+        "location": "California",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "square_feet": 4500,
+        "image": "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg"
+      },
+      {
+        "id": 16,
+        "title": "Loft Moderno",
+        "price": 280000,
+        "location": "Tokyo",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "square_feet": 1800,
+        "image": "https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg"
+      },
+      {
+        "id": 17,
+        "title": "Casa Colonial",
+        "price": 350000,
+        "location": "Lima",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 4000,
+        "image": "https://images.pexels.com/photos/2383854/pexels-photo-2383854.jpeg"
+      },
+      {
+        "id": 18,
+        "title": "Residencia Imperial",
+        "price": 950000,
+        "location": "Beijing",
+        "bedrooms": 8,
+        "bathrooms": 7,
+        "square_feet": 9000,
+        "image": "https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg"
+      },
+      {
+        "id": 19,
+        "title": "Mansión Clásica",
+        "price": 670000,
+        "location": "Roma",
+        "bedrooms": 6,
+        "bathrooms": 5,
+        "square_feet": 7200,
+        "image": "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg"
+      },
+      {
+        "id": 20,
+        "title": "Casa del Acantilado",
+        "price": 530000,
+        "location": "Santorini",
+        "bedrooms": 5,
+        "bathrooms": 4,
+        "square_feet": 4800,
+        "image": "https://images.pexels.com/photos/460695/pexels-photo-460695.jpeg"
+      },
+      {
+        "id": 21,
+        "title": "Villa Moderna",
+        "price": 390000,
+        "location": "Miami",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 3800,
+        "image": "https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg"
+      },
+      {
+        "id": 22,
+        "title": "Casa Escandinava",
+        "price": 300000,
+        "location": "Oslo",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 3200,
+        "image": "https://images.pexels.com/photos/1178623/pexels-photo-1178623.jpeg"
+      },
+      {
+        "id": 23,
+        "title": "Residencia Minimalista",
+        "price": 340000,
+        "location": "Seúl",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "square_feet": 2900,
+        "image": "https://images.pexels.com/photos/2988860/pexels-photo-2988860.jpeg"
+      },
+      {
+        "id": 24,
+        "title": "Casa Campestre",
+        "price": 280000,
+        "location": "Buenos Aires",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "square_feet": 4000,
+        "image": "https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg"
+      },
+      {
+        "id": 25,
+        "title": "Mansión del Océano",
+        "price": 890000,
+        "location": "Maldivas",
+        "bedrooms": 7,
+        "bathrooms": 6,
+        "square_feet": 8600,
+        "image": "https://images.pexels.com/photos/707581/pexels-photo-707581.jpeg"
+      }
+  ]
