@@ -61,6 +61,41 @@ app.post('/api/homes', (req,res)=>{
         })
     })
 
+    // Endpoint para eliminar una casa
+    app.delete('/api/homes/:id', (req, res) =>{
+        // Obtenemos el id del objeto (casa) a elimar
+        const homeId = parseInt(req.params.id);
+
+        // Realizamos la valizacion para saber si el objeto (casa) existe
+        if(isNaN(homeId)){
+            // si no existe retornamos un status 404 (Not Found)
+            return res.status(400).json({error: 'ID invalido para eliminar'})
+        }
+
+        // Buscamos la casa en el array de datos
+        const homeIndex = data.findIndex(home => home.id === homeId);
+
+        // Si la casa no existe retornamos un status 404 (Not Found)
+        if(homeIndex === -1){
+            return res.status(404).json({error: 'Casa no encontrada'          
+            })
+        }
+            // Eliminamos el objeto (casa) del array de tatos
+        const deleteHome = data.splice(homeIndex, 1)[0];
+
+        // Guardamos el nuevo array de datos en el archivo 'data.json
+        fs.writeFile('./data.json', JSON.stringify(data, null, 2), (error)=>{
+        // Si llega a ocurrir un error 
+            if(error){
+                console.log('Err0r al guardar los datos', error);
+                // Mandamos una respuesta con un 500 (Internal Server Error)
+                return res.status(500).json({error: 'Error al guardar los datos'})
+            }
+        // Si todo sale bien respondemos con 200 (OK) y la casa fue eliminada correctamente
+        res.status(200).json({message: 'Casa eliminada correctamente', deleteHome})
+        })
+    })
+
 
 app.listen(PORT, () =>{
     console.log(` API de SmatHouse corriendo en http://localhost:${PORT} `)
