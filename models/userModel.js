@@ -1,6 +1,6 @@
 //Datos de los usuarios 
 const fs = require("fs");
-const path = require("pat") // manejar rutas de archivos
+const path = require("path") // manejar rutas de archivos
 
 // Definimos una ruta donde se guardaran los usuario
 const usersPathFile = path.join(__dirname, "../data/users.json");
@@ -23,7 +23,7 @@ const User = {
 getAll: () => loadUsers(),
 
 // Buscamos un usuario por email
-findByEmail: (email)=> loadUsers().find((user) => user.email === email);
+findByEmail: (email)=> loadUsers().find((user) => user.email === email),
 
 // Creamos un nuevo usuario con ID unico
 create: (newUser) =>{
