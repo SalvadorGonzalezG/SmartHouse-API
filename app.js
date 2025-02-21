@@ -2,8 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs"); // Modulo para leer archivos
 const data = require("./data.json");
-const { error } = require("console");
-const { title } = require("process");
+const userRoutes = require("./routes/userRoutes") //importacion rutas del usuario
 
 require("dotenv").config(); // Cargamos las variables de entorno
 
@@ -18,6 +17,7 @@ app.use(cors());
 // Configuramos la  express para que pueda leer las peticiones JSON
 app.use(express.json());
 
+app.use("/api", userRoutes);
 app.get("/api/homes", (req, res) => {
   res.json(data);
 });
