@@ -15,7 +15,8 @@ const PORT = process.env.PORT || 3002; // Puerto por defecto 3002
 app.use(cors());
 
 // Configuramos la  express para que pueda leer las peticiones JSON
-app.use(express.json());
+app.use(express.json()); //se habilita el json enel body
+app.use(express.urlencoded({extended: true})) //Soporte para foms
 
 app.use("/api", userRoutes);
 app.get("/api/homes", (req, res) => {

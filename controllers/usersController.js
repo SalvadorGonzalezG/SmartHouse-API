@@ -35,9 +35,9 @@ const getUserByEmail = async(req, res) =>{
 const createUser = async(req, res)=>{
     try {
         // Extraemos los datos del cuerpo de la solicitud
-        const {firstName, lastName, email, password, confirmPassword}  = req.params;
+        const {firstName, lastName, email, password, confirmPassword}  = req.body;
         // realizamos una validacion que todos los campos requeridos hayan sido ingresador
-        if(!firstName || !lastName || !email || password || confirmPassword){
+        if(!firstName || !lastName || !email || !password || !confirmPassword){
             // fi no han sido ingresados todos los datos retornamos un 400 con un msj
             return res.status(400).json({message: "Todos los campos son obligatios"})
         }
