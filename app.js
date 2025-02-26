@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs"); // Modulo para leer archivos
 const data = require("./data.json");
-const userRoutes = require("./routes/userRoutes") //importacion rutas del usuario
+const userRoutes = require("./routes/userRoutes"); //importacion rutas del usuario
+const { error } = require("console");
 
 require("dotenv").config(); // Cargamos las variables de entorno
 
@@ -28,7 +29,7 @@ app.get("/api/homes", (req, res) => {
  */
 app.post("/api/homes", (req, res) => {
   // Obtenemos los datos de la casa a crear
-  const { title, price, location, bedrooms, bathrooms, square_feet, image } =
+  const {userId, title, price, location, bedrooms, bathrooms, square_feet, image } =
     req.body;
 
   // Validamos que todos los campos sean obligatorios
@@ -49,6 +50,7 @@ app.post("/api/homes", (req, res) => {
   // Creamos el (nuevo objeto) ...la nueva casa con los datos enviados por el cliente
   const newHome = {
     id: data.length > 0 ? data[data.length - 1].id + 1 : 1,
+    userId: parseInt(userId), // asociando la propiedad con el ID del usario creado y parseando el dato por si llegara como un string
     title,
     price,
     location,
@@ -70,6 +72,20 @@ app.post("/api/homes", (req, res) => {
     res.status(201).json(newHome);
   });
 });
+
+//Enpoint para obtener todas la casas poblicadas por un usuario
+app.get("/api/homes/user/:userId", (req, res)=>{
+    // obtener el ID del usuario desde los parametros de la URL
+    const userId = parseInt(req.params.userId);
+    // Validamos que el ID sea un numero valido
+    if(isNaN(userId)){
+        return res.status(400).json({error: "Id del usuario incorrecto"})
+    }
+    // filtramos las casas que pertenecen a ese usuario con el ID proporcionado 
+    const userHomes = data.filter((home)=> home.userId === userId);
+    // respondemos con la lista de casas del usuario 
+    res.status(200).json(userHomes);
+})
 
 // Endpoint para eliminar una casa
 app.delete("/api/homes/:id", (req, res) => {
