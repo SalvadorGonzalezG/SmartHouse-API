@@ -3,7 +3,7 @@ const cors = require("cors");
 const fs = require("fs"); // Modulo para leer archivos
 const data = require("./data.json");
 const userRoutes = require("./routes/userRoutes"); //importacion rutas del usuario
-const { error } = require("console");
+
 
 require("dotenv").config(); // Cargamos las variables de entorno
 
