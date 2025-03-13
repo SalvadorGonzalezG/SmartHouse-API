@@ -3,6 +3,7 @@ const cors = require("cors");
 const fs = require("fs"); // Modulo para leer archivos
 const data = require("./data.json");
 const userRoutes = require("./routes/userRoutes"); //importacion rutas del usuario
+const {login} = require("./controllers/authController")
 
 
 require("dotenv").config(); // Cargamos las variables de entorno
@@ -18,7 +19,8 @@ app.use(cors());
 // Configuramos la  express para que pueda leer las peticiones JSON
 app.use(express.json()); //se habilita el json enel body
 app.use(express.urlencoded({extended: true})) //Soporte para foms
-
+// Route para el inicio de sesion
+app.use("/api/login", login);
 app.use("/api", userRoutes);
 app.get("/api/homes", (req, res) => {
   res.json(data);
