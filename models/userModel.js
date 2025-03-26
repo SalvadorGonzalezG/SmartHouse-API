@@ -24,8 +24,11 @@ const User = {
 getAll: () => loadUsers(),
 
 // Buscamos un usuario por email
-findByEmail: (email)=> loadUsers().find((user) => user.email === email),
-
+findByEmail: async (email)=> {
+    const users = loadUsers();
+    return users.find((user) => user.email === email) || null;
+    //loadUsers().find((user) => user.email === email);
+},
 // Creamos un nuevo usuario con ID unico
 create: async (newUser) =>{
     const users = loadUsers(); // cargamos los usuarios actuales
@@ -42,7 +45,7 @@ create: async (newUser) =>{
     return newUser;
 },
 authenticate: async (email, password)=>{
-    const user = User.findByEmail(email);
+    const user = await User.findByEmail(email);
     if(!user) return null;
 
     // Comparamos la contraseña ingresada con la guardada
